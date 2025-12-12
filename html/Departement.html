@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Département Informatique</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar-left">
+        <img src="../img/logo.png" alt="Logo département" class="earth-icon">
+        <h1 class="site-title">Département Informatique</h1>
+    </div>
+
+    <div class="carousel">
+        <img src="../img/campus1.png" class="slide active" alt="Campus">
+        <img src="../img/campus2.png" class="slide" alt="Lab informatique">
+        <img src="../img/campus3.jpg" class="slide" alt="Salle de cours">
+        <img src="../img/campus4.jpg" class="slide" alt="Étudiants">
+
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+
+   <nav>
+        <a href="./page_accueil.html">Accueil</a>
+        <a href="./Departement.html">Département</a>
+        <a href="./vie_etudiant.html">Vie étudiante</a>
+        <a href="./Formations.html">Formations</a>
+        <a href="./services.html">Services</a>
+        <a href="./a_propos.html">À propos</a>
+    </nav>
+</header>
+
+<!-- --------------------------------------------------------- -->
+<!-- CARROUSEL DES PROFESSEURS -->
+<!-- --------------------------------------------------------- -->
+
+<section class="prof-carousel-section">
+    <h2 class="section-title">Équipe pédagogique</h2>
+
+    <div class="carousel-wrapper">
+        <button class="prof-arrow left" onclick="scrollCarousel(-1)">&#10094;</button>
+
+        <div class="prof-scroll" id="prof-scroll">
+
+            <!-- Prof 1 -->
+            <div class="prof-card" onclick="scrollToProfile('hamidi')">
+                <img src="../img/hamidi.png" alt="Mohammed Hamidi">
+                <p class="prof-name">Mohammed HAMIDI</p>
+            </div>
+
+            <!-- Prof 2 -->
+            <div class="prof-card" onclick="scrollToProfile('gabis')">
+                <img src="../img/gabis.png" alt="Asma Gabis">
+                <p class="prof-name">Asma GABIS</p>
+            </div>
+
+            <!-- Prof 3 -->
+            <div class="prof-card" onclick="scrollToProfile('cherifa')">
+                <img src="../img/ben.png" alt="Cherifa Ben Khelil">
+                <p class="prof-name">Cherifa BEN KHELIL</p>
+            </div>
+
+            <!-- Prof 4 -->
+            <div class="prof-card" onclick="scrollToProfile('maha')">
+                <img src="../img/maha.jpg" alt="Maha Naceur">
+                <p class="prof-name">Maya NACEUR</p>
+            </div>
+
+            <!-- Prof 5 -->
+            <div class="prof-card" onclick="scrollToProfile('amir')">
+                <img src="../img/Amir.jpg" alt="Amir Chachoui">
+                <p class="prof-name">Amir CHACHOUI</p>
+            </div>
+
+            <!-- Prof 6 -->
+            <div class="prof-card" onclick="scrollToProfile('blanche')">
+                <img src="../img/blanche.png" alt="Alexendre Blanche">
+                <p class="prof-name">Alexendre BLANCHE</p>
+            </div>
+
+            <!-- Prof 7 -->
+            <div class="prof-card" onclick="scrollToProfile('lena')">
+                <img src="../img/lena.jpg" alt="Lena Trebaul">
+                <p class="prof-name">Lena TREBAUL</p>
+            </div>
+
+            <!-- Prof 8 -->
+            <div class="prof-card" onclick="scrollToProfile('rado')">
+                <img src="../img/rado.png" alt="Rado Rakotonarivo">
+                <p class="prof-name">Rado RAKOTONARIVO</p>
+            </div>
+
+            <!-- Prof 9 -->
+            <div class="prof-card" onclick="scrollToProfile('yaovi')">
+                <img src="../img/yaovi.jpg" alt="Yaovi Soglo">
+                <p class="prof-name">Yaovi SOGLO</p>
+            </div>
+
+            <!-- Prof 10 -->
+            <div class="prof-card" onclick="scrollToProfile('kim')">
+                <img src="../img/kim.png" alt="Mourad Kmimech">
+                <p class="prof-name">Mourad KMIMECH</p>
+            </div>
+
+            <!-- Prof 11 -->
+            <div class="prof-card" onclick="scrollToProfile('guifo')">
+                <img src="../img/guifo.png" alt="A Yvan GUIFO FODJO">
+                <p class="prof-name">A Yvan GUIFO FODJO</p>
+            </div>
+
+            <!-- Prof 11 -->
+            <div class="prof-card" onclick="scrollToProfile('valot')">
+                <img src="../img/valot.jpg" alt="Mikael Valot">
+                <p class="prof-name">Mikael VALOT</p>
+            </div>
+        </div>
+        <button class="prof-arrow right" onclick="scrollCarousel(1)">&#10095;</button>
+        
+
+    </div>
+</section>
+
+<!-- --------------------------------------------------------- -->
+<!-- PROFILS COMPLETS (ANCRES) -->
+<!-- --------------------------------------------------------- -->
+
+<section id="hamidi" class="prof-profile">
+    <img src="../img/hamidi.png">
+    <div>
+        <h3>Mohammed HAMIDI</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:mohammed.hamidi@efrei.fr">mohammed.hamidi@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=mohammed.hamidi@efrei.fr" target="_blank">mohammed.hamidi</a>
+        </p>
+        <p><strong>Enseignant-Chercheur en informatique - Campus : Efrei Paris</strong></p>
+        <p>Spécialiste des systèmes, de la cybersécurité et des infrastructures réseau.</p>
+        <p>Il enseigne les architectures distribuées, la sécurité des réseaux et encadre plusieurs projets orientés systèmes et sécurité.</p>
+    </div>
+</section>
+
+<section id="gabis" class="prof-profile">
+    <img src="../img/gabis.png">
+    <div>
+        <h3>Asma GABIS</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:asma.gabis@efrei.fr">asma.gabis@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=asma.gabis@efrei.fr" target="_blank">asma.gabis</a>
+        </p>
+        <p><strong>Responsable du département - Campus : Efrei Paris</strong></p>
+        <p>Enseignante en intelligence artificielle et apprentissage automatique.</p>
+        <p>Supervise l'organisation pédagogique et l'évolution des programmes.</p>
+    </div>
+</section>
+
+<section id="cherifa" class="prof-profile">
+    <img src="../img/ben.png">
+    <div>
+        <h3>Cherifa BEN KHELIL</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:cherifa.benkhelil@efrei.fr">cherifa.benkhelil@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=cherifa.benkhelil@efrei.fr" target="_blank">cherifa.benkhelil</a>
+        </p>
+        <p><strong>Enseignante-Chercheuse - Campus : Efrei Paris</strong></p>
+        <p>Spécialiste du développement web moderne.</p>
+        <p>Accompagne les étudiants dans les projets front-end.</p>
+    </div>
+</section>
+
+<section id="maha" class="prof-profile">
+    <img src="../img/maha.jpg">
+    <div>
+        <h3>Maha NACEUR</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:maha.naceur@efrei.fr">maha.naceur@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=maha.naceur@efrei.fr" target="_blank">maha.naceur</a>
+        </p>
+        <p><strong>Enseignante en informatique - Campus : Efrei Paris</strong></p>
+        <p>Encadrante en programmation et bases de données.</p>
+        <p>Aide les étudiants à développer leurs premiers projets logiciels.</p>
+    </div>
+</section>
+
+<section id="amir" class="prof-profile">
+    <img src="../img/Amir.jpg">
+    <div>
+        <h3>Amir CHACHOUI</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:amir.chachoui@efrei.fr">amir.chachoui@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=amir.chachoui@efrei.fr" target="_blank">amir.chachoui</a>
+        </p>
+        <p><strong>Enseignant en informatique - Campus : Efrei Paris</strong></p>
+        <p>Expert en développement logiciel et génie informatique.</p>
+        <p>Enseigne la POO et les algorithmes avancés.</p>
+    </div>
+</section>
+
+<section id="blanche" class="prof-profile">
+    <img src="../img/blanche.png">
+    <div>
+        <h3>Alexandre BLANCHE</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:alexandre.blanche@efrei.fr">alexandre.blanche@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=alexandre.blanche@efrei.fr" target="_blank">alexandre.blanche</a>
+        </p>
+        <p><strong>Enseignant - Campus : Efrei Bordeaux</strong></p>
+        <p>Spécialisé dans les technologies back-end, systèmes serveurs et cloud computing.</p>
+        <p>Encadre les projets d'architecture logicielle.</p>
+    </div>
+</section>
+
+<section id="lena" class="prof-profile">
+    <img src="../img/lena.jpg">
+    <div>
+        <h3>Lena TREBAUL</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:lena.trebaul@efrei.fr">lena.trebaul@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=lena.trebaul@efrei.fr" target="_blank">lena.trebaul</a>
+        </p>
+        <p><strong>Enseignante - Campus : Efrei Paris</strong></p>
+        <p>Docteure en neurosciences computationnelles.</p>
+        <p>Aide les étudiants à concevoir des interfaces centrées utilisateurs.</p>
+    </div>
+</section>
+
+<section id="rado" class="prof-profile">
+    <img src="../img/rado.png">
+    <div>
+        <h3>Rado RAKOTONARIVO</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:rado.rakotonarivo@efrei.fr">rado.rakotonarivo@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=rado.rakotonarivo@efrei.fr" target="_blank">rado.rakotonarivo</a>
+        </p>
+        <p><strong>Enseignant-Chercheur - Campus : Efrei Paris</strong></p>
+        <p>Spécialiste Linux, systèmes et sécurité.</p>
+        <p>Intervient sur la virtualisation et les scripts systèmes.</p>
+    </div>
+</section>
+
+<section id="yaovi" class="prof-profile">
+    <img src="../img/yaovi.jpg">
+    <div>
+        <h3>Yaovi SOGLO</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:yaovi.soglo@efrei.fr">yaovi.soglo@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=yaovi.soglo@efrei.fr" target="_blank">yaovi.soglo</a>
+        </p>
+        <p><strong>Enseignant-Chercheur - Campus : Efrei Paris</strong></p>
+        <p>Expert en bases de données et modélisation SQL.</p>
+        <p>Accompagne les étudiants sur la gestion et l'optimisation des données.</p>
+    </div>
+</section>
+
+<section id="kim" class="prof-profile">
+    <img src="../img/kim.png">
+    <div>
+        <h3>Mourad KMIMECH</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:mourad.kmimech@efrei.fr">mourad.kmimech@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=mourad.kmimech@efrei.fr" target="_blank">mourad.kmimech</a>
+        </p>
+        <p><strong>Enseignant-Chercheur - Campus : Efrei Paris</strong></p>
+        <p>Expert en systèmes embarqués, IoT et programmation bas niveau.</p>
+        <p>Encadre les projets électroniques et temps réel.</p>
+    </div>
+</section>
+
+<section id="guifo" class="prof-profile">
+    <img src="../img/guifo.png">
+    <div>
+        <h3>A Yvan GUIFO FODJO</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:ayvan.guifo@efrei.fr">ayvan.guifo@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=ayvan.guifo@efrei.fr" target="_blank">ayvan.guifo</a>
+        </p>
+        <p><strong>Enseignant-Chercheur - Campus : Efrei Paris</strong></p>
+        <p>Spécialiste cybersécurité offensive & défense informatique.</p>
+        <p>Enseigne le pentest et la sécurité applicative.</p>
+    </div>
+</section>
+
+<section id="valot" class="prof-profile">
+    <img src="../img/valot.jpg">
+    <div>
+        <h3>Mikael VALOT</h3>
+        <p class="contact">
+            &#9993; <a href="mailto:mikael.valot@efrei.fr">mikael.valot@efrei.fr</a><br>
+            &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=mikael.valot@efrei.fr" target="_blank">mikael.valot</a>
+        </p>
+        <p><strong>Enseignant - Campus : Efrei Bordeaux</strong></p>
+        <p>Expert en génie logiciel et programmation Java.</p>
+        <p>Encadre des projets avancés orientés objet.</p>
+    </div>
+</section>
+
+
+<footer>
+    <p>&copy;2025 Joss DOUNIAMA OKANA, Aziz BEN ABDESSALEM, Omar KAMOUN, Chraf GUIDOUCHE.</p>
+</footer>
+
+</body>
+</html>
