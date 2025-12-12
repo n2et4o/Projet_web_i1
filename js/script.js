@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ============================================================
-    // === CARROUSEL PRINCIPAL (CAMPUS / HEADER) ===================
-    // ============================================================
-
+        // === CARROUSEL PRINCIPAL (CAMPUS / HEADER) ===================
+    
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
 
@@ -22,10 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    // ============================================================
-    // === CARROUSEL DES PROFESSEURS (AUTOSCROLL + MANUEL) ========
-    // ============================================================
-
+        // === CARROUSEL DES PROFESSEURS (AUTOSCROLL + MANUEL) ========
+    
     const scrollBox = document.getElementById("prof-scroll");
 
     // Flèches pour défiler
@@ -48,23 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (scrollBox.scrollLeft + scrollBox.clientWidth >= scrollBox.scrollWidth - 10) {
             scrollBox.scrollTo({ left: 0, behavior: "smooth" });
         }
-    }, 3000); // toutes les 3.5 sec
-
-
-
-    // ============================================================
-    // === ANCIEN CARROUSEL PROF (NON UTILISÉ) — SUPPRIMÉ =========
-    // ============================================================
-    // Le système d’images + noms défilants a été remplacé
-    // par un vrai carrousel horizontal avec auto-scroll.
-    // (Donc updateProf / changeProf n’est plus nécessaire.)
+    }, 3000); // toutes les 3 sec
 
 });
 
 
-// ============================================================
 // === DÉFILEMENT VERS LE PROFIL COMPLET =======================
-// ============================================================
 
 function scrollToProfile(id) {
     document.getElementById(id).scrollIntoView({
