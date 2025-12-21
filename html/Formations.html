@@ -26,17 +26,17 @@
     </div>
 
    <nav>
-        <a href="./page_accueil.html">Accueil</a>
-        <a href="./Departement.html">Département</a>
-        <a href="./vie_etudiant.html">Vie étudiante</a>
-        <a href="./Formations.html">Formations</a>
-        <a href="./services.html">Services</a>
-        <a href="./a_propos.html">À propos</a>
+        <a href="./page_accueil.html" class="active">Accueil</a>
+        <a href="./Departement.html" class="active">Département</a>
+        <a href="./vie_etudiant.html" class="active">Vie étudiante</a>
+        <a href="./Formations.html" class="active">Formations</a>
+        <a href="./services.html" class="active">Services</a>
+        <a href="./a_propos.html" class="active">À propos</a>
     </nav>
 </header>
 
 <section>
-    <h1>Formations</h1>
+    <h2>Formations</h2>
 </section>
 
 <section>
@@ -200,14 +200,14 @@
         <tr>
             <td>TI502M</td>
             <td>Networks and Protocols</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14313">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
         <tr>
             <td>TI504M</td>
             <td>Computer Architecture and Operating Systems</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14314">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
@@ -215,7 +215,7 @@
         <tr>
             <td>TI505M</td>
             <td>Java Programming</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14315">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
@@ -363,14 +363,14 @@
         <tr>
             <td>TI502M</td>
             <td>Networks and Protocols</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14325">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
         <tr>
             <td>TI504M</td>
             <td>Computer Architecture and Operating Systems</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14327">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
@@ -379,35 +379,35 @@
         <tr>
             <td>TI505M</td>
             <td>Java Programming</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14329">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
         <tr>
             <td>TI508M</td>
             <td>Introduction to Machine Learning</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14331">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
         <tr>
             <td>TI510M</td>
             <td>Advanced Web Programming</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14334">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
         <tr>
             <td>TI515M</td>
             <td>Object-oriented Analysis & Design with UML</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14336">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
 
         <tr>
             <td>TI530M</td>
             <td>Introduction to Cybersecurity</td>
-            <td><a href="#">Lien ressource</a></td>
+            <td><a href="https://moodle.myefrei.fr/course/view.php?id=14338">Lien ressource</a></td>
             <td><a href="#">Annale</a></td>
         </tr>
     </table>
@@ -424,6 +424,26 @@
         Stages · Projets · Alternance · Parcours professionnels.
     </p>
 </section>
+
+<!-- ================= CHATBOT ================= -->
+
+<button class="chatbot-fab" id="chatbotFab">💬</button>
+
+<div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+        <h3>Département Informatique</h3>
+        <button class="chatbot-close" id="chatbotClose">✕</button>
+    </div>
+
+    <div class="chatbot-body" id="chatbotBody"></div>
+
+    <div class="chatbot-footer">
+        <input type="text" id="chatbotInput" placeholder="Posez votre question..." >
+        <button id="chatbotSend">Envoyer</button>
+    </div>
+</div>
+
+<!-- ================= FIN CHATBOT ================= -->
 
 <footer>
     <p>&copy;2025 Joss DOUNIAMA OKANA, Aziz BEN ABDESSALEM, Omar KAMOUN & Chraf GUIDOUCHE.</p>

@@ -26,18 +26,17 @@
     </div>
 
    <nav>
-        <a href="./page_accueil.html">Accueil</a>
-        <a href="./Departement.html">Département</a>
-        <a href="./vie_etudiant.html">Vie étudiante</a>
-        <a href="./Formations.html">Formations</a>
-        <a href="./services.html">Services</a>
-        <a href="./a_propos.html">À propos</a>
+        <a href="./page_accueil.html" class="active">Accueil</a>
+        <a href="./Departement.html" class="active">Département</a>
+        <a href="./vie_etudiant.html" class="active">Vie étudiante</a>
+        <a href="./Formations.html" class="active">Formations</a>
+        <a href="./services.html" class="active">Services</a>
+        <a href="./a_propos.html" class="active">À propos</a>
     </nav>
 </header>
 
-<!-- --------------------------------------------------------- -->
+
 <!-- CARROUSEL DES PROFESSEURS -->
-<!-- --------------------------------------------------------- -->
 
 <section class="prof-carousel-section">
     <h2 class="section-title">Équipe pédagogique</h2>
@@ -110,7 +109,7 @@
             <!-- Prof 11 -->
             <div class="prof-card" onclick="scrollToProfile('guifo')">
                 <img src="../img/guifo.png" alt="A Yvan GUIFO FODJO">
-                <p class="prof-name">A Yvan GUIFO FODJO</p>
+                <p class="prof-name">Yvan GUIFO FODJO</p>
             </div>
 
             <!-- Prof 11 -->
@@ -125,12 +124,9 @@
     </div>
 </section>
 
-<!-- --------------------------------------------------------- -->
 <!-- PROFILS COMPLETS (ANCRES) -->
-<!-- --------------------------------------------------------- -->
-
 <section id="hamidi" class="prof-profile">
-    <img src="../img/hamidi.png">
+    <img src="../img/hamidi.png" alt="Mohammed HAMIDI">
     <div>
         <h3>Mohammed HAMIDI</h3>
         <p class="contact">
@@ -144,7 +140,7 @@
 </section>
 
 <section id="gabis" class="prof-profile">
-    <img src="../img/gabis.png">
+    <img src="../img/gabis.png" alt="Asma GABIS">
     <div>
         <h3>Asma GABIS</h3>
         <p class="contact">
@@ -158,7 +154,7 @@
 </section>
 
 <section id="cherifa" class="prof-profile">
-    <img src="../img/ben.png">
+    <img src="../img/ben.png" alt="Cherifa BEN KHELIL">
     <div>
         <h3>Cherifa BEN KHELIL</h3>
         <p class="contact">
@@ -172,7 +168,7 @@
 </section>
 
 <section id="maha" class="prof-profile">
-    <img src="../img/maha.jpg">
+    <img src="../img/maha.jpg" alt="Maha NACEUR">
     <div>
         <h3>Maha NACEUR</h3>
         <p class="contact">
@@ -186,7 +182,7 @@
 </section>
 
 <section id="amir" class="prof-profile">
-    <img src="../img/Amir.jpg">
+    <img src="../img/Amir.jpg" alt="Amir CHACHOUI">
     <div>
         <h3>Amir CHACHOUI</h3>
         <p class="contact">
@@ -200,7 +196,7 @@
 </section>
 
 <section id="blanche" class="prof-profile">
-    <img src="../img/blanche.png">
+    <img src="../img/blanche.png" alt="Alexandre BLANCHE">
     <div>
         <h3>Alexandre BLANCHE</h3>
         <p class="contact">
@@ -214,7 +210,7 @@
 </section>
 
 <section id="lena" class="prof-profile">
-    <img src="../img/lena.jpg">
+    <img src="../img/lena.jpg" alt="Lena TREBAUL">
     <div>
         <h3>Lena TREBAUL</h3>
         <p class="contact">
@@ -228,7 +224,7 @@
 </section>
 
 <section id="rado" class="prof-profile">
-    <img src="../img/rado.png">
+    <img src="../img/rado.png" alt="Rado RAKOTONARIVO">
     <div>
         <h3>Rado RAKOTONARIVO</h3>
         <p class="contact">
@@ -242,7 +238,7 @@
 </section>
 
 <section id="yaovi" class="prof-profile">
-    <img src="../img/yaovi.jpg">
+    <img src="../img/yaovi.jpg" alt="Yaovi SOGLO">
     <div>
         <h3>Yaovi SOGLO</h3>
         <p class="contact">
@@ -256,7 +252,7 @@
 </section>
 
 <section id="kim" class="prof-profile">
-    <img src="../img/kim.png">
+    <img src="../img/kim.png" alt="Mourad Kmimech">
     <div>
         <h3>Mourad KMIMECH</h3>
         <p class="contact">
@@ -270,9 +266,9 @@
 </section>
 
 <section id="guifo" class="prof-profile">
-    <img src="../img/guifo.png">
+    <img src="../img/guifo.png" alt="Yvan GUIFO FODJO">
     <div>
-        <h3>A Yvan GUIFO FODJO</h3>
+        <h3>Yvan GUIFO FODJO</h3>
         <p class="contact">
             &#9993; <a href="mailto:ayvan.guifo@efrei.fr">ayvan.guifo@efrei.fr</a><br>
             &#128172; <a href="https://teams.microsoft.com/l/chat/0/0?users=ayvan.guifo@efrei.fr" target="_blank">ayvan.guifo</a>
@@ -284,7 +280,7 @@
 </section>
 
 <section id="valot" class="prof-profile">
-    <img src="../img/valot.jpg">
+    <img src="../img/valot.jpg" alt="Mikael VALOT">
     <div>
         <h3>Mikael VALOT</h3>
         <p class="contact">
@@ -296,6 +292,26 @@
         <p>Encadre des projets avancés orientés objet.</p>
     </div>
 </section>
+
+<!-- ================= CHATBOT ================= -->
+
+<button class="chatbot-fab" id="chatbotFab">💬</button>
+
+<div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+        <h3>Département Informatique</h3>
+        <button class="chatbot-close" id="chatbotClose">✕</button>
+    </div>
+
+    <div class="chatbot-body" id="chatbotBody"></div>
+
+    <div class="chatbot-footer">
+        <input type="text" id="chatbotInput" placeholder="Posez votre question..." >
+        <button id="chatbotSend">Envoyer</button>
+    </div>
+</div>
+
+<!-- ================= FIN CHATBOT ================= -->
 
 
 <footer>

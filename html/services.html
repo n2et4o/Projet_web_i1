@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width initial-scale=1.0">
     <title>Services</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="../js/script.js" defer></script>
@@ -26,37 +27,190 @@
     </div>
 
    <nav>
-        <a href="./page_accueil.html">Accueil</a>
-        <a href="./Departement.html">Département</a>
-        <a href="./vie_etudiant.html">Vie étudiante</a>
-        <a href="./Formations.html">Formations</a>
-        <a href="./services.html">Services</a>
-        <a href="./a_propos.html">À propos</a>
+        <a href="./page_accueil.html" class="active">Accueil</a>
+        <a href="./Departement.html" class="active">Département</a>
+        <a href="./vie_etudiant.html" class="active">Vie étudiante</a>
+        <a href="./Formations.html" class="active">Formations</a>
+        <a href="./services.html" class="active">Services</a>
+        <a href="./a_propos.html" class="active">À propos</a>
     </nav>
 </header>
 <section>
-    <h1>Services du département</h1>
+    <h2>Services du département</h2>
 </section>
 
 
  
 <!--  ======================= DATES IMPORTANTES ================================ -->
  
-
 <section id="dates-importantes">
-    <h2>Dates importantes du département informatique</h2>
 
-    <ul class="dates-list">
-        <li><strong>Décembre :</strong> Advent Of Code - concours international de programmation</li>
-        <li><strong>Décembre :</strong> CyberNight - CTF cybersécurité Efrei</li>
-        <li><strong>Janvier :</strong> Prologin - sélection qualifications</li>
-        <li><strong>Février :</strong> Efrei Games Week - animations & conférences gaming</li>
-        <li><strong>Mars :</strong> Tech Alert - conférences IA / cybersécurité</li>
-        <li><strong>Mai :</strong> Nuit du Code (NDC) - marathon de programmation</li>
-        <li><strong>Juin :</strong> Examens finaux & remise des projets</li>
-        <li><strong>Septembre :</strong> Rentrée académique - reprise des cours</li>
-    </ul>
+    <h2 class="dates-title">Dates importantes du département informatique</h2>
+
+    <!-- Sélecteur de mois -->
+    <div class="month-selector">
+        <button data-month="Tous">Tous</button>
+        <button data-month="Janvier">Janvier</button>
+        <button data-month="Février">Février</button>
+        <button data-month="Mars">Mars</button>
+        <button data-month="Avril">Avril</button>
+        <button data-month="Mai">Mai</button>
+        <button data-month="Juin">Juin</button>
+        <button data-month="Septembre">Septembre</button>
+        <button data-month="Décembre">Décembre</button>
+    </div>
+
+    <!-- Scroll horizontal -->
+    <div class="events-scroll">
+
+        <!-- Advent Of Code -->
+        <div class="event-card" data-month="Décembre">
+            <div class="event-image">
+                <img src="../img/adc.png" alt="Advent of Code">
+                <div class="event-logo">
+                    <img src="../img/adc.png" alt="Logo Advent of Code">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Décembre</span>
+                <h3>Advent Of Code</h3>
+                <p>
+                    Un concours international proposant chaque jour des énigmes de programmation
+                    pour améliorer sa logique et ses compétences en algorithmique.
+                </p>
+            </div>
+        </div>
+
+        <!-- CyberNight -->
+        <div class="event-card" data-month="Décembre">
+            <div class="event-image">
+                <img src="../img/cbn.jpeg" alt="CyberNight">
+                <div class="event-logo">
+                    <img src="../img/cbn.jpeg" alt="Logo CyberNight">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Décembre</span>
+                <h3>CyberNight</h3>
+                <p>
+                    Un événement dédié à la cybersécurité sous forme de Capture The Flag (CTF),
+                    permettant de découvrir les bases de la sécurité informatique.
+                </p>
+            </div>
+        </div>
+
+        <!-- Prologin -->
+        <div class="event-card" data-month="Janvier">
+            <div class="event-image">
+                <img src="../img/prolo.png" alt="Prologin">
+                <div class="event-logo">
+                    <img src="../img/prolo.png" alt="Logo Prologin">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Janvier</span>
+                <h3>Prologin</h3>
+                <p>
+                    Concours national d'informatique axé sur la résolution de problèmes
+                    algorithmiques avancés, ouvert aux étudiants passionnés.
+                </p>
+            </div>
+        </div>
+
+        <!-- Efrei Games Week -->
+        <div class="event-card" data-month="Février">
+            <div class="event-image">
+                <img src="../img/egw.png" alt="Efrei Games Week">
+                <div class="event-logo">
+                    <img src="../img/egw.png" alt="Logo Efrei Games Week">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Février</span>
+                <h3>Efrei Games Week</h3>
+                <p>
+                    Une semaine d'animations, de conférences et de tournois autour du jeu vidéo,
+                    de l'e-sport et des métiers du numérique.
+                </p>
+            </div>
+        </div>
+
+        <!-- Tech Alert -->
+        <div class="event-card" data-month="Avril">
+            <div class="event-image">
+                <img src="../img/tka.png" alt="Tech Alert">
+                <div class="event-logo">
+                    <img src="../img/tka.png" alt="Logo Tech Alert">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Avril</span>
+                <h3>Tech Alert</h3>
+                <p>
+                    Cycle de conférences portant sur l'intelligence artificielle,
+                    la cybersécurité et les enjeux technologiques actuels.
+                </p>
+            </div>
+        </div>
+
+        <!-- Nuit du Code -->
+        <div class="event-card" data-month="Mai">
+            <div class="event-image">
+                <img src="../img/ndc.png" alt="Nuit du Code">
+                <div class="event-logo">
+                    <img src="../img/ndc.png" alt="Logo Nuit du Code">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Mai</span>
+                <h3>Nuit du Code (NDC)</h3>
+                <p>
+                    Un marathon de programmation de plusieurs heures en équipe,
+                    visant à concevoir un jeu ou une application en un temps limité.
+                </p>
+            </div>
+        </div>
+
+        <!-- Examens -->
+        <div class="event-card" data-month="Juin">
+            <div class="event-image">
+                <img src="../img/exam.jpg" alt="Examens">
+                <div class="event-logo">
+                    <img src="../img/exam.jpg" alt="Logo Examens">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Juin</span>
+                <h3>Examens finaux</h3>
+                <p>
+                    Période d'évaluations finales comprenant les examens écrits
+                    et la remise des projets académiques.
+                </p>
+            </div>
+        </div>
+
+        <!-- Rentrée -->
+        <div class="event-card" data-month="Septembre">
+            <div class="event-image">
+                <img src="../img/rentre.jpg" alt="Rentrée académique">
+                <div class="event-logo">
+                    <img src="../img/rentre.jpg" alt="Logo Rentrée">
+                </div>
+            </div>
+            <div class="event-content">
+                <span class="event-tag">Septembre</span>
+                <h3>Rentrée académique</h3>
+                <p>
+                    Reprise officielle des cours, accueil des nouveaux étudiants
+                    et lancement de la nouvelle année universitaire.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
 </section>
+
 
 
  
@@ -67,30 +221,32 @@
     <h2>FAQ - Questions fréquentes</h2>
 
     <div class="faq-item">
-        <h3> Où trouver les annales des examens ?</h3>
+        <h3 onclick="this.classList.toggle('open')"> 
+            Où trouver les annales des examens ?</h3>
         <p>Les annales des examens sont disponibles dans l'espace Moodle de chaque matière, onglet “Ressources”. 
         Certaines promotions disposent également d'un Drive partagé accessible via les associations étudiantes.</p>
     </div>
 
     <div class="faq-item">
-        <h3> Comment fonctionnent les permanences ?</h3>
+        <h3 onclick="this.classList.toggle('open')"> 
+            Comment fonctionnent les permanences ?</h3>
         <p>Chaque semaine, des enseignants sont disponibles pour répondre à vos questions sur n'importe quel module. 
         Il suffit de venir sur le créneau indiqué ou d'envoyer un email pour réserver un créneau si nécessaire.</p>
     </div>
 
     <div class="faq-item">
-        <h3> Que faire si je ne comprends pas bien mon cours malgré mes efforts ?</h3>
+        <h3 onclick="this.classList.toggle('open')"> Que faire si je ne comprends pas bien mon cours malgré mes efforts ?</h3>
         <p>Voici les solutions les plus efficaces :</p>
-        <ul>
-            <li>Assister aux permanences des professeurs</li>
-            <li>Travailler en groupe avec d'autres étudiants</li>
-            <li>Regarder les replays / supports Moodle</li>
-            <li>Poser vos questions pendant les TP ou au forum Moodle</li>
-        </ul>
+            <ul>
+                <li>Assister aux permanences des professeurs</li>
+                <li>Travailler en groupe avec d'autres étudiants</li>
+                <li>Regarder les replays / supports Moodle</li>
+                <li>Poser vos questions pendant les TP ou au forum Moodle</li>
+            </ul>
     </div>
 
     <div class="faq-item">
-        <h3> Où trouver de l'aide pour progresser en programmation ?</h3>
+        <h3 onclick="this.classList.toggle('open')"> Où trouver de l'aide pour progresser en programmation ?</h3>
         <p>Sur les plateformes suivantes : Advent of Code, Exercism, LeetCode, Prologin, Judge0, 
         et les ateliers organisés par les associations de l'école.</p>
     </div>
@@ -107,7 +263,7 @@
     <p>Les enseignants ci-dessous sont disponibles chaque semaine pour répondre à vos questions.  
        <br>Pour réserver une permanence, envoyez un email au professeur correspondant.</p>
 
-    <table class="permanence-table">
+    <table  class="table-compacte">
         <thead>
             <tr>
                 <th>Enseignant</th>
@@ -304,6 +460,26 @@
         en précisant votre niveau, votre disponibilité et le sujet que vous souhaitez aborder.
     </p>
 </section>
+
+<!-- ================= CHATBOT ================= -->
+
+<button class="chatbot-fab" id="chatbotFab">💬</button>
+
+<div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header">
+        <h3>Département Informatique</h3>
+        <button class="chatbot-close" id="chatbotClose">✕</button>
+    </div>
+
+    <div class="chatbot-body" id="chatbotBody"></div>
+
+    <div class="chatbot-footer">
+        <input type="text" id="chatbotInput" placeholder="Posez votre question...">
+        <button id="chatbotSend">Envoyer</button>
+    </div>
+</div>
+
+<!-- ================= FIN CHATBOT ================= -->
 
 
 <footer>

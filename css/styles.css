@@ -20,6 +20,14 @@ header img {
     margin-bottom: 8px;
 }
 
+nav {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
 nav a {
     text-decoration: none;
     color: white;
@@ -28,13 +36,20 @@ nav a {
     font-weight: 500;
     padding: 8px 15px;
     border-radius: 6px;
-    transition: 0.2s;
+    transition: 0.2s;    
 }
 
 
 nav a:hover {
     background-color: #1e5dd8;
 }
+
+nav a.active {
+    background-color: #1e5dd8;
+    color: white;
+    font-weight: 600;
+}
+
 
 section {
     background-color: white;
@@ -44,17 +59,37 @@ section {
     border-radius: 10px;
 }
 
+section,
+.prof-card,
+.prof-profile,
+.faq-item,
+table {
+    border-radius: 14px;
+}
+
+
+
+
 h1 {
-    color: #0c2d6b;
-    margin-top: 0;
-    font-size: 32px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h1::after {
+    content: "";
+    width: 300px;
+    height: 4px;
+    background: #1e5dd8;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 h2 {
-    color: #1e5dd8; 
-    margin-top: 15px;
-    font-size: 24px;
+    border-left: 6px solid #1e5dd8;
+    padding-left: 12px;
 }
+
 
 ul, ol {
     display: block;
@@ -103,6 +138,16 @@ tbody tr:hover {
     background-color: #eef3ff;
 }
 
+table tbody tr {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+table tbody tr:hover {
+    background-color: #eef3ff;
+    transform: scale(1.01);
+}
+
+
 footer {
     background-color: #0c2d6b;
     color: white;
@@ -119,9 +164,30 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
+
+
+/* ================================ titre et logo ========================================== */
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 250px;
+}
+
+.earth-icon {
+     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* TITRE DU SITE */
+.site-title {
+    font-size: 24px;
+    margin: 0;
+}
 
 
 /* ====================================  carousel ============================================= */
@@ -194,6 +260,32 @@ a:hover {
   width: 150px;
   height: 150px; 
 }
+
+.credits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+    gap: 50px;
+}
+
+.credit-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.credit-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.credit-text p {
+    margin: 6px 0;
+}
+
+
+
 
 /* ==============================CARROUSEL DES PROFESSEURS=============================== */
 
@@ -294,6 +386,21 @@ a:hover {
     font-size: 24px;
 }
 
+.prof-card,
+.prof-profile,
+.faq-item,
+.credits div {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.prof-card:hover,
+.prof-profile:hover,
+.faq-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
 /* ==================================== formation =========================================*/
 
 .matiere-table {
@@ -339,7 +446,53 @@ a:hover {
     padding-left: 20px;
 }
 
-/* --- FAQ --- */
+/* DATES IMPORTANTES — STYLE CARTE MODERNE               */
+
+.dates-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 30px 35px;
+    margin: 40px auto;
+    max-width: 1100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Titre avec barre bleue à gauche */
+.dates-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-left: 16px;
+    border-left: 6px solid #1e5dd8;
+    color: #111;
+}
+
+/* Liste */
+.dates-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.dates-list li {
+    font-size: 17px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Mois en gras (impact visuel) */
+.dates-list strong {
+    color: #000;
+}
+
+.dates-card {
+    animation: fadeUp 0.6s ease both;
+}
+
+
+
+/* ---  ================================ FAQ  =============================--- */
 .faq-item {
     background: #f5f5f5;
     padding: 15px;
@@ -349,7 +502,26 @@ a:hover {
 
 .faq-item h3 {
     margin-bottom: 8px;
+    cursor: pointer;
 }
+
+/* Par défaut on cache */
+.faq-item p,
+.faq-item ul {
+    display: none;
+    margin-top: 8px;
+}
+
+/* Quand le h3 a la classe open, on affiche le p */
+.faq-item h3.open + p {
+    display: block;
+}
+
+/* Quand le h3 a la classe open, on affiche aussi le ul (qui est après le p) */
+.faq-item h3.open + p + ul {
+    display: block;
+}
+
 
 /* --- Permanences --- */
 .permanence-table {
@@ -389,4 +561,274 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ================= TABLE COMPACTE (ADMINISTRATIF) ================= */
 
+.table-compacte {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;            /* plus petit */
+    margin-top: 15px;
+}
+
+.table-compacte th {
+    background-color: #0c2d6b;
+    color: white;
+    padding: 8px 10px;          /* padding réduit */
+    text-align: left;
+    font-weight: 600;
+}
+
+.table-compacte td {
+    padding: 6px 10px;          /* lignes plus fines */
+    border-bottom: 1px solid #e0e6f1;
+    vertical-align: middle;
+}
+
+.table-compacte tr:hover {
+    background-color: #f0f4ff;
+}
+
+.table-compacte a {
+    color: #0c2d6b;
+    font-size: 13px;
+}
+
+
+/* ================= CHATBOT ================= */
+
+.chatbot-fab {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #1e5dd8;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    z-index: 9999;
+}
+
+.chatbot-window {
+    position: fixed;
+    bottom: 95px;
+    right: 25px;
+    width: 350px;
+    height: 460px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.chatbot-header {
+    background-color: #0c2d6b;
+    color: white;
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbot-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chatbot-body {
+    flex: 1;
+    padding: 14px;
+    overflow-y: auto;
+    background-color: #f5f7fa;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.bot {
+    background-color: white;
+    border: 1px solid #e0e6f1;
+}
+
+.user {
+    background-color: #e6efff;
+    margin-left: auto;
+}
+
+.chatbot-footer {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    border-top: 1px solid #e0e6f1;
+}
+
+.chatbot-footer input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.chatbot-footer button {
+    background-color: #1e5dd8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+/* ================================  Responsive Design =============================================== */
+
+/* Animation d'apparition */
+section {
+    animation: fadeInUp 0.6s ease both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* CARTE ÉVÉNEMENT / ACTU   */
+
+
+.event-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+/* Image */
+.event-image {
+    position: relative;
+    height: 180px;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Logo rond sur l'image */
+.event-logo {
+    position: absolute;
+    bottom: -28px;
+    left: 20px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.event-logo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+/* Contenu */
+.event-content {
+    padding: 40px 20px 20px;
+}
+
+.event-content h3 {
+    margin: 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Tag */
+.event-tag {
+    display: inline-block;
+    background-color: #eef3ff;
+    color: #1e5dd8;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Sélecteur de mois */
+.month-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.month-selector button {
+    background: #eef3ff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.month-selector button.active {
+    background: #1e5dd8;
+    color: white;
+}
+
+/* Scroll horizontal des events */
+.events-scroll {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scroll-behavior: smooth;
+}
+
+.events-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.events-scroll::-webkit-scrollbar-thumb {
+    background: #1e5dd8;
+    border-radius: 10px;
+}
+
+/* Carte */
+.event-card {
+    min-width: 300px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px);
+}
